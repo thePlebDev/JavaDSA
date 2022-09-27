@@ -16,21 +16,14 @@ public class RomanToInteger {
         map.put('M', 1000);
         int result = 0;
 
-        for(int i =0; i <s.length();i++) {
-            //MCMXCIV
-            //i =2
-            //result = 1100
+    for(int i = 0; i < s.length(); i++){
 
-            if(i > 0 && map.get(s.charAt(i)) > map.get(s.charAt(i -1))){
-                result += map.get(s.charAt(i)) - 2 * map.get(s.charAt(i -1));
-            }else{
-                result += map.get(s.charAt(i));
-            }
-
-
-
-
+        if(i >0 && map.get(s.charAt(i)) > map.get(s.charAt(i -1))){
+            result += map.get(s.charAt(i)) - 2 * map.get(s.charAt(i -1));
+        }else{
+            result += map.get(s.charAt(i));
         }
+    }
 
         return result;
     }
