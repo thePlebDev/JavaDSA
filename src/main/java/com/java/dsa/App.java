@@ -10,6 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
-
+        RomanToInteger romanToInteger = new RomanToInteger();
+        System.out.println(romanToInteger.romanToInt("MCMXCIV"));
     }
 }
